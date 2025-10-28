@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mines</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark text-white d-flex flex-column align-items-center justify-content-center vh-100">
+
+  <div class="container text-center">
+    <h1 class="mb-4">Mines Game</h1>
+
+    <div class="row mb-3 justify-content-center">
+      <div class="col-3">
+        <input type="number" id="stakeAmount" class="form-control" min="1" value="10" placeholder="Amount">
+      </div>
+      <div class="col-3">
+        <input type="number" id="minesCount" class="form-control" min="1" max="24" value="5" placeholder="Number of Mines">
+      </div>
+      <div class="col-3">
+        <button id="startBtn" class="btn btn-success w-100">Start Game</button>
+      </div>
+    </div>
+
+    <div id="grid" class="d-grid gap-2 mb-3"></div>
+
+    <div class="d-flex justify-content-center gap-4 mb-3">
+      <div>
+        <h5>Multiplier</h5>
+        <h4 id="multiplier">1.00x</h4>
+      </div>
+      <div>
+        <h5>Winnings</h5>
+        <h4>$<span id="winnings">0.00</span></h4>
+      </div>
+      <div>
+        <button id="cashoutBtn" class="btn btn-warning mt-2" disabled>Cash Out</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
